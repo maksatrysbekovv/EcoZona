@@ -121,7 +121,7 @@ export function makeServer({ environment = 'development' } = {}) {
           {
             errors: [],
             data: {
-              status: 'User logged out successfully',
+              status: 'userLoggedOut',
             },
           }
         );
@@ -169,7 +169,7 @@ export function makeServer({ environment = 'development' } = {}) {
             {
               errors: [],
               data: {
-                status: 'Profile updated successfully',
+                status: 'profileUpdated',
               },
             }
           );
@@ -422,7 +422,7 @@ export function makeServer({ environment = 'development' } = {}) {
           {
             errors: [],
             data: {
-              status: 'Review added successfully',
+              status: 'reviewAdded',
             },
           }
         );
@@ -586,30 +586,30 @@ export function makeServer({ environment = 'development' } = {}) {
                 {
                   errors: [],
                   data: {
-                    status: 'Payment successful',
+                    status: 'paymentSuccess',
                     bookingDetails: [
                       {
-                        label: 'Booking ID',
+                        label: 'bookingId',
                         value: 'BKG123',
                       },
                       {
-                        label: 'Booking Date',
+                        label: 'bookingDate',
                         value: '2024-01-10',
                       },
                       {
-                        label: 'Hotel Name',
+                        label: 'hotelName',
                         value: 'Seaside Resort',
                       },
                       {
-                        label: 'Check-in Date',
+                        label: 'checkInDate',
                         value: '2024-01-20',
                       },
                       {
-                        label: 'Check-out Date',
+                        label: 'checkOutDate',
                         value: '2024-01-25',
                       },
                       {
-                        label: 'Total Fare',
+                        label: 'totalFare',
                         value: '14500 сом',
                       },
                     ],

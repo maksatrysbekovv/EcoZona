@@ -1,8 +1,6 @@
+EcoZona
 
-
-Stay Booker Pro
-
-Stay Booker Pro — это готовый к продакшену веб-сайт для бронирования отелей, созданный с использованием современных веб-технологий. Приложение представляет собой полностью функциональный и адаптивный сервис для бронирования отелей.
+EcoZona — это готовый к продакшену веб-сайт для бронирования отелей, созданный с использованием современных веб-технологий. Приложение представляет собой полностью функциональный и адаптивный сервис для бронирования отелей.
 Backend API: staybooker-express-api￼
 
 ⸻
@@ -101,7 +99,7 @@ GitHub Actions
 
 🤝 Вклад в проект (Contributing)
 
-Мы приветствуем вклад в развитие Stay Booker Pro!
+Мы приветствуем вклад в развитие EcoZona!
 Вы можете создавать issue или отправлять pull request.
 
 ⸻
@@ -155,9 +153,9 @@ git commit -m "Ваше сообщение" -n
 
 
 
-# Stay Booker Pro
+# EcoZona
 
-Stay Booker Pro is a production-ready hotel booking website built with modern web technologies. It is designed to be a fully functional and responsive web application for hotel booking services. For the backend api checkout: [staybooker-express-api](https://github.com/iZooGooD/stay-booker-hotel-booking-express-api)
+EcoZona is a production-ready hotel booking website built with modern web technologies. It is designed to be a fully functional and responsive web application for hotel booking services. For the backend api checkout: [staybooker-express-api](https://github.com/iZooGooD/stay-booker-hotel-booking-express-api)
 
 ## Key Features
 
@@ -227,7 +225,7 @@ This command will open the Cypress test runner, where you can execute specific t
 
 ### Husky for Pre-Commit Hooks
 
-Stay Booker Pro uses Husky to manage pre-commit hooks, ensuring that code quality and formatting standards are maintained. Before each commit, Husky runs various checks to make sure that the committed code adheres to defined standards.
+EcoZona uses Husky to manage pre-commit hooks, ensuring that code quality and formatting standards are maintained. Before each commit, Husky runs various checks to make sure that the committed code adheres to defined standards.
 
 ### GitHub Workflow
 
@@ -251,7 +249,7 @@ Here's how you can seamlessly incorporate it into the "Contributing" section:
 
 ## Contributing
 
-We welcome contributions to Stay Booker Pro! If you have suggestions or would like to contribute code, please feel free to create issues or submit pull requests.
+We welcome contributions to EcoZona! If you have suggestions or would like to contribute code, please feel free to create issues or submit pull requests.
 
 ### Code Quality and Linting
 
@@ -273,4 +271,3 @@ git commit -m "Your commit message" -n
 
 - Backend integration with Express.js for a complete full-stack experience.
 - Additional features and improvements to the booking process.
-

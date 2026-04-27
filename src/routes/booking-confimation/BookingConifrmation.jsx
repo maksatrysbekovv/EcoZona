@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useReactToPrint } from 'react-to-print';
 import { useRef } from 'react';
+import { useLanguage } from 'i18n/LanguageContext';
 
 /**
  * Represents the booking confirmation component.
@@ -15,6 +16,7 @@ const BookingConfirmation = () => {
   const contentToPrint = useRef(null);
   const location = useLocation();
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   const [bookingDetails, setBookingDetails] = useState(null);
 
@@ -36,7 +38,7 @@ const BookingConfirmation = () => {
     } else {
       navigate('/');
     }
-  }, [bookingDetails, location.state, navigate]);
+  }, [location.state, navigate]);
 
   return (
     <div className="md:mx-auto max-w-[800px] my-40">
@@ -45,7 +47,7 @@ const BookingConfirmation = () => {
           to="/"
           className={`border p-2 min-w-[120px] text-center transition-all delay-100 hover:bg-brand hover:text-white`}
         >
-          Back to home
+          {t('booking.backHome')}
         </Link>
         <button
           onClick={() => {
@@ -53,7 +55,7 @@ const BookingConfirmation = () => {
           }}
           className="border p-2 min-w-[120px] transition-all delay-75 hover:bg-gray-500 hover:text-white hover:animate-bounce"
         >
-          Print
+          {t('booking.print')}
         </button>
       </div>
       <div
@@ -67,19 +69,20 @@ const BookingConfirmation = () => {
           <FontAwesomeIcon icon={faStar} className="text-brand text-3xl" />
           <FontAwesomeIcon icon={faStar} className="text-brand text-xl" />
         </div>
-        <h1 className="text-gray-700 text-2xl font-bold">Booking Confirmed</h1>
+        <h1 className="text-gray-700 text-2xl font-bold">{t('booking.confirmed')}</h1>
         <p className="text-gray-600 mt-2">
-          Thank you for your booking! Your reservation has been confirmed.
+          {t('booking.thankYouMessage')}
         </p>
         <p className="text-gray-600">
-          Please check your email for the booking details and instructions for
-          your stay.
+          {t('booking.checkEmail')}
         </p>
         <div className="mt-4 flex justify-center flex-wrap items-center">
           {bookingDetails &&
             bookingDetails.map((detail, index) => (
               <div key={index} className="border-r-2 px-4">
-                <p className="text-gray-600 text-sm">{detail.label}</p>
+                <p className="text-gray-600 text-sm">
+                  {detail.label ? t(`booking.${detail.label}`) : ''}
+                </p>
                 <span className="text-gray-600 text-sm font-bold">
                   {detail.value}
                 </span>

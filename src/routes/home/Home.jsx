@@ -19,7 +19,7 @@ const Home = () => {
 
   // State variables
   const [isDatePickerVisible, setisDatePickerVisible] = useState(false);
-  const [locationInputValue, setLocationInputValue] = useState(t('home.defaultLocation'));
+  const [locationInputValue, setLocationInputValue] = useState(t(''));
   const [numGuestsInputValue, setNumGuestsInputValue] = useState('');
   const [popularDestinationsData, setPopularDestinationsData] = useState({
     isLoading: true,

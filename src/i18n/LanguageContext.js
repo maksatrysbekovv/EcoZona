@@ -23,17 +23,25 @@ export const LanguageProvider = ({ children }) => {
         }
     };
 
-    const t = (key) => {
+    const t = (key, params = {}) => {
         const keys = key.split('.');
         let value = translations[language];
 
         for (const k of keys) {
-            if (value && value[k]) {
+            if (value && Object.prototype.hasOwnProperty.call(value, k)) {
                 value = value[k];
             } else {
                 console.warn(`Translation missing for key: ${key}`);
                 return key;
             }
+        }
+
+        if (typeof value === 'string') {
+            return value.replace(/{{(\w+)}}/g, (_, paramKey) => {
+                return Object.prototype.hasOwnProperty.call(params, paramKey)
+                    ? params[paramKey]
+                    : `{{${paramKey}}}`;
+            });
         }
 
         return value || key;

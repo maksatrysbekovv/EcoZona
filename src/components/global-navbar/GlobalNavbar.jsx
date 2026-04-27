@@ -12,7 +12,7 @@ import { useLanguage } from 'i18n/LanguageContext';
 const GlobalNavbar = () => {
   const [isVisible, setIsVisible] = useState(false);
   const { isAuthenticated } = useContext(AuthContext);
-  const { language, changeLanguage, t } = useLanguage();
+  const { language, changeLanguage } = useLanguage();
   const onHamburgerMenuToggle = () => {
     setIsVisible(!isVisible);
   };
